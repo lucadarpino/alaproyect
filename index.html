@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8489478383277327"
   crossorigin="anonymous"></script>
 <head>
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css">
     <title>Dólar Hoy</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -24,6 +24,11 @@
         <div id="cotizaciones" class="result">
           <p id="dolar-cotizacion" class="mb-4">Cargando cotización del dólar...</p>
           <p id="cotizacion-resultado"></p>
+        </div>
+        <div class="input-container">
+          <input type="number" id="cotizacion-input2" placeholder="Cantidad en dolares"
+            class="border-2 border-blue-500 rounded p-2 text-lg">
+          <button onclick="cotizarDolares()" class="bg-blue-500 text-white rounded p-2">Cotizar</button>
         </div>
         <div class="donaciones">
           <a href="http://mpago.la/2ZdqJYo">

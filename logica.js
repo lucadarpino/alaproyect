@@ -36,6 +36,19 @@ function obtenerDolar() {
       document.getElementById('cotizacion-resultado').innerText = 'Ingrese una cantidad válida en pesos';
     }
   }
+  function cotizarDolares(){
+    const cotizacionInput = document.getElementById('cotizacion-input2');
+    const cantidadPesos = parseFloat(cotizacionInput.value);
+    if (!isNaN(cantidadPesos) && cantidadPesos > 0) {
+      obtenerDolar().then(cotizacion => {
+        const { dolarCompra } = cotizacion;
+        const cantidadDolares = cantidadPesos * dolarCompra;
   
+        document.getElementById('cotizacion-resultado').innerText = `Dólares: $${cantidadPesos.toFixed(2)} -  Pesos:$${cantidadDolares.toFixed(2)}`;
+      });
+    } else {
+      document.getElementById('cotizacion-resultado').innerText = 'Ingrese una cantidad válida en dolares';
+    }
+  }
   obtenerDolar();
   
